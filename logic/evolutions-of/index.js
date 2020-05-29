@@ -1,5 +1,18 @@
 const evolutionOf = (pokeArray, name) => {
+  var expected = [];
+  pokeArray.map((item) => {
+    if (item.name === name) {
+      expected.push({ num: item.num, name: item.name });
+      if (item.next_evolution)
+        item.next_evolution.map((el) => expected.push(el));
+      if (item.prev_evolution)
+        item.prev_evolution.map((el) => expected.push(el));
+    }
+  });
 
+  if (expected.length === 0)
+    return null;
+  else { const res = expected.sort((a, b) => (a.num > b.num) ? 1 : -1); return res; }
 };
 
 module.exports = evolutionOf;

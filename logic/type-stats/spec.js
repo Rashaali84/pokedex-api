@@ -16,6 +16,7 @@ describe("typeStats(pokeData, type) : returns how many times a type appears in t
       typeName: 'Grass',
       weaknessCount: 0
     };
+    console.log('answer is ' + expected);
     assert.deepStrictEqual(actual, expected);
   });
 

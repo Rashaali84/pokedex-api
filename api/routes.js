@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
+const bodyParser = require('body-parser'); // add body parser
 const handlers = require('./handlers');
 
+router.use(bodyParser.json()); // add using
 
 router.get("/", handlers.home);
 

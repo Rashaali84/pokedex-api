@@ -57,6 +57,7 @@ describe("valuesForKey(pokeData, key) : returns all unique values stored in that
       ['Electric', 'Rock'],
       ['Electric', 'Grass', 'Fighting', 'Rock']
     ];
+
     assert.deepStrictEqual(actual, expected);
   });
 
